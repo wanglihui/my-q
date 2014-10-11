@@ -3,7 +3,12 @@ my-q
 
 自己实现的Promise-Defer模式，参考了q项目，遂命名为my-q
 
-# EXAMPLE
+# 安装
+===
+npm install my-q
+
+# 使用帮助
+===
 
 ```
 /**
