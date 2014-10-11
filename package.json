@@ -1,14 +1,15 @@
 {
   "name": "my-q",
-  "version": "0.0.1",
-  "description":"promise-defer 模式",
-    "keywords":"promise,defer",
-    "author": {
-        "name": "深山猎人",
-        "email": "wanglihui.sjz@gmail.com"
-    },
+  "version": "1.0.0",
+  "description": "promise-defer 模式",
+  "keywords": "promise,defer",
+  "author": {
+    "name": "深山猎人",
+    "email": "wanglihui.sjz@gmail.com"
+  },
   "devDependencies": {
     "mocha": "^1.21.4",
     "should": "^4.0.4"
-  }
+  },
+  "dependencies": {}
 }
