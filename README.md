@@ -1,7 +1,6 @@
 my-q
 ====
 
-javascript promise-defer
 自己实现的Promise-Defer模式，参考了q项目，遂命名为my-q
 
 # EXAMPLE
