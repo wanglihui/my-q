@@ -3,4 +3,6 @@
  */
 'use strict';
 
-module.exports = require("./lib");
+module.exports = require("./lib").Defer;
+exports.Defer = require("./lib").Defer;
+exports.promiseFn = require("./lib").promiseFn;

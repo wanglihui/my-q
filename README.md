@@ -16,6 +16,7 @@ npm install my-q
 
 var Defer = require('./lib').Defer;
 
+//将普通函数转换成promise-defer
 function addOne(value) {
     var defer = new Defer();
     if (/^\d$/.test(value)){
@@ -26,6 +27,16 @@ function addOne(value) {
     }
     return defer.promise;
 }
+
+//将回调函数转换成promise-defer模式
+function testCallback(value, callback) {
+    callback(null, value);
+}
+var promiseFn = require("./lib").promiseFn,
+fn = promiseFn(testCallback);
+fn(2).success(function(result){
+    console.info("==============="+result+"=============");
+});
 
 //接收成功消息
 addOne(1).success(function(result) {

@@ -4,9 +4,10 @@
 'use strict';
 
 var Defer = require("./lib").Defer;
+var promiseFn = require("./lib").promiseFn;
 var assert = require("assert");
 
-describe("lib/index.js", function(){
+describe("./lib/defer.js", function(){
     function test(value) {
         var defer = new Defer();
         if (value > 1) {
@@ -36,4 +37,30 @@ describe("lib/index.js", function(){
             });
         });
     });
+});
+
+describe("./lib/index.js", function(){
+   describe("#promiseFn", function(){
+       it("should be ok", function(done) {
+           function testOneArg(value, callback){
+               callback(null, value);
+           }
+           var fn = promiseFn(testOneArg);
+           fn(3).success(function(result) {
+               assert.equal(3, result);
+               done();
+           });
+       });
+
+       it("should be ok", function(done) {
+           function testMutiArgs(value1, value2, value3, callback) {
+               callback(null, value1+value2+value3);
+           }
+           var fn = promiseFn(testMutiArgs);
+           fn(1,2,3).success(function(result) {
+               assert.equal(6, result);
+               done();
+           });
+       })
+   })
 });

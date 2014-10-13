@@ -1,6 +1,6 @@
 {
   "name": "my-q",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "promise-defer 模式",
   "keywords": "promise,defer",
   "author": {
